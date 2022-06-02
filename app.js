@@ -14,8 +14,8 @@ todoList.addEventListener('click',deleteCheck);
 function addTodo(event){
 event.preventDefault();
 //todo div
-const todoDiv=document.createElement('div');
-todoDiv.classList.add('todo');
+const todoDiv=document.createElement("div");
+todoDiv.classList.add("todo");
 //create li
 const newTodo=document.createElement('li');
 newTodo.innerText=todoInput.value;
@@ -23,17 +23,17 @@ newTodo.classList.add('todo-item');
 todoDiv.appendChild(newTodo);
 // completed /checked
 const completedButton=document.createElement('button');
-completedButton.innerHTML='<i class="fas fa-check"></i>';
+completedButton.innerHTML=`<i class="fas fa-check"></i>`;
 completedButton.classList.add("complete-btn");
 todoDiv.appendChild(completedButton);
 //Trash button
-const trashButton=document.createElement('button');
-trashButton.innerHTML='<i class="fas fa-trash"></i>';
+const trashButton=document.createElement("button");
+trashButton.innerHTML=`<i class="fas fa-trash"></i>`;
 trashButton.classList.add("trash-btn");
 todoDiv.appendChild(trashButton);
 
 //append to list
-todoList.appendChild(newTodo);
+todoList.appendChild(todoDiv);
 //clear todo input value
 todoInput.value="";
 }
